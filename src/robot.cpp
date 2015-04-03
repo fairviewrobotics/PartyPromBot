@@ -22,8 +22,8 @@ class RobotDemo : public IterativeRobot {
     Talon *leftBack;
 
     // Loader and shooter motor controllers
-    Victor *loader;
-    Talon *shooter;
+//    Victor *loader;
+//    Talon *shooter;
 
     // Shooter timer
     Timer *timer;
@@ -46,8 +46,8 @@ public:
   		rightBack  = new Talon(2);
   		leftBack   = new Talon(4);
 
-  		loader     = new Victor(6);
-  		shooter    = new Talon(5);
+//  		loader     = new Victor(6);
+//  		shooter    = new Talon(5);
 
   		timer = new Timer();
 //
@@ -86,9 +86,9 @@ public:
   		rightFront->SetSpeed(0.0);
   		leftBack->SetSpeed(0.0);
   		rightBack->SetSpeed(0.0);
-
-  		shooter->SetSpeed(0.0);
-  		loader->SetSpeed(0.0);
+//
+//  		shooter->SetSpeed(0.0);
+//  		loader->SetSpeed(0.0);
 
 		timer->Reset(); // Set timer back to 0
 
@@ -225,8 +225,8 @@ public:
 //  		}
 //  		printCounter++;
 
-  		shooter->SetSpeed(shooterSpeed);
-  		loader->SetSpeed(loaderSpeed);
+//  		shooter->SetSpeed(shooterSpeed);
+//  		loader->SetSpeed(loaderSpeed);
   	}
 
   	void DisabledContinuous(void) {}
